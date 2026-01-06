@@ -44,7 +44,7 @@ secim = st.sidebar.radio("Menü", ["Ana Sayfa (Durum Bildir)", "Stres Analizi", 
 # --- SAYFA 1: ANA SAYFA ---
 if secim == "Ana Sayfa (Durum Bildir)":
     # use_column_width yerine use_container_width kullanıldı (Hatayı çözer)
-    st.image("https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", use_container_width=True)
+    st.image("https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", width=400)
     st.title("Bugün Nasıl Hissediyorsun?")
     
     stres_seviyesi = st.slider("Stres Seviyen (1 = Çok Sakin, 10 = Patlamak Üzere)", 1, 10, 5)
