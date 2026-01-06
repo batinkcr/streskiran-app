@@ -39,35 +39,47 @@ def yapay_zeka_onerisi(metin, seviye):
     elif "yorgun" in metin or "uyku" in metin or "bitkin" in metin or "halsiz" in metin or "göz" in metin:
         oneri = "🔋 Vücudun sana 'Şarjım bitti' sinyali veriyor. Zorlama. İmkanın varsa 20 dakikalık bir 'Güç Uykusu' (Power Nap) yap. Yoksa yüzünü soğuk suyla yıka ve kafein yerine bol su iç."
 
-    # 4. GÜZELLİK VE ÖZGÜVEN KAYGISI (YENİ)
-    elif "çirkin" in metin or "sivilce" in metin or "kilo" in metin or "ayna" in metin or "bakımsız" in metin or "saç" in metin:
-        oneri = "🌸 Kendine haksızlık etme. Güzellik kalıplara sığmaz, bir histir. Bugün kendini şımart: Bir yüz maskesi yap, en sevdiğin kıyafetini giy veya aynaya bakıp kendine gülümse. Sen değerlisin."
+    # 4. GÜZELLİK VE BEDEN ALGISI
+    elif "çirkin" in metin or "sivilce" in metin or "ayna" in metin or "bakımsız" in metin or "saç" in metin:
+        oneri = "🌸 Kendine haksızlık etme. Güzellik kalıplara sığmaz, bir histir. Bugün kendini şımart: Bir yüz maskesi yap, en sevdiğin kıyafetini giy veya aynaya bakıp kendine gülümse."
 
-    # 5. GELECEK KAYGISI (YENİ)
+    # 5. GELECEK KAYGISI
     elif "gelecek" in metin or "korku" in metin or "belirsiz" in metin or "ne olacağım" in metin or "mezun" in metin:
         oneri = "🔮 Gelecek henüz gelmedi, geçmiş ise geçti. Elinde sadece 'Şu An' var. 5 yıl sonrasını düşünerek bugünü zehir etme. Sadece bugünün küçük hedeflerine odaklan, yol kendiliğinden açılır."
 
-    # 6. MADDİ KAYGILAR (YENİ)
+    # 6. MADDİ KAYGILAR
     elif "para" in metin or "borç" in metin or "ekonomi" in metin or "zam" in metin or "harcama" in metin or "maaş" in metin:
         oneri = "💸 Maddi stres çok ağırdır ama senin değerini cüzdanın belirlemez. Kontrol edebileceğin şeylere odaklan (basit bir bütçe planı gibi). Ve unutma: En iyi şeyler (temiz hava, gün batımı, yürüyüş) hala bedava."
 
-    # 7. YALNIZLIK HİSSİ (YENİ)
+    # 7. YALNIZLIK HİSSİ
     elif "yalnız" in metin or "kimse" in metin or "tek" in metin or "dost" in metin or "sıkıl" in metin:
         oneri = "🫂 Yalnız hissetmek, kimsesiz olduğun anlamına gelmez. Bazen kendinle baş başa kalmak bir fırsattır. Eğer sosyalleşmek istersen, eski bir dostuna sadece 'Nasılsın?' yazmak harika bir başlangıçtır."
 
-    # 8. TRAFİK VE YOL
+    # 8. SAĞLIK VE BESLENME
+    elif "kilo" in metin or "diyet" in metin or "yemek" in metin or "şişman" in metin or "zayıf" in metin or "sağlık" in metin or "ağrı" in metin:
+        oneri = "🍎 Bedenin senin düşmanın değil, evindir. 'Ya hep ya hiç' diyeti yapmak yerine, bugün vücuduna iyi gelecek tek bir şey yap (bir bardak su içmek veya kısa bir yürüyüş gibi). Sağlık, tartıdaki rakamdan ibaret değildir."
+
+    # 9. ÖZDEĞER VE MÜKEMMELİYETÇİLİK
+    elif "yetersiz" in metin or "başarısız" in metin or "hata" in metin or "mükemmel" in metin or "suçlu" in metin or "beceriksiz" in metin:
+        oneri = "🌟 'Mükemmel' iyinin düşmanıdır. Hata yapmak, öğrenmenin bir parçasıdır. Kendine, en yakın arkadaşına davranacağın kadar şefkatli davran. Yeterince iyisin ve bu kadarı yeterli."
+
+    # 10. TEKNOLOJİ VE SOSYAL MEDYA
+    elif "sosyal medya" in metin or "instagram" in metin or "telefon" in metin or "bağımlı" in metin or "ekran" in metin or "stalk" in metin:
+        oneri = "📱 Dijital detoks zamanı! Sosyal medyada gördüğün 'kusursuz' hayatlar, gerçeğin sadece %1'lik vitrinidir. Telefonu bir kenara bırak, pencereyi aç ve gerçek dünyaya 5 dakika odaklan. FOMO (Kaçırma Korkusu) sadece bir illüzyondur."
+
+    # 11. TRAFİK VE YOL
     elif "trafik" in metin or "yol" in metin or "metrobüs" in metin:
         oneri = "🚗 Trafiği kontrol edemezsin ama tepkilerini edebilirsin. Bu süreyi kendine ayırdığın bir zaman olarak gör. Sevdiğin bir podcasti veya sesli kitabı aç."
         
-    # 9. OKUL VE SINAV
+    # 12. OKUL VE SINAV
     elif "ders" in metin or "sınav" in metin or "okul" in metin or "proje" in metin:
         oneri = "📚 Bilgi yüklemesi yaşıyorsun. Beynin dolu bir bardak gibi. Pomodoro tekniği (25 dk çalış, 5 dk mola) uygula. O 5 dakikada ekrana bakma, uzaklara bak."
         
-    # 10. İŞ VE KARİYER
+    # 13. İŞ VE KARİYER
     elif "iş" in metin or "patron" in metin or "toplantı" in metin or "müşteri" in metin:
         oneri = "💼 İş stresi eve taşınmamalı. Derin bir nefes al ve omuzlarını düşür. Kendine şunu sor: 'Bu problem 1 yıl sonra benim için ne kadar önemli olacak?'"
         
-    # 11. GENEL/TANIMSIZ DURUMLAR
+    # 14. GENEL/TANIMSIZ DURUMLAR
     else:
         oneri = "🌿 Bazen sebepsiz yere de daralabiliriz. Kendine bir bitki çayı veya soğuk bir içecek ısmarla. Omuzlarını gevşet ve 3 derin nefes al."
     
@@ -76,20 +88,53 @@ def yapay_zeka_onerisi(metin, seviye):
 # --- YAN MENÜ ---
 st.sidebar.image("https://cdn-icons-png.flaticon.com/512/3663/3663335.png", width=100)
 st.sidebar.title("🌿 Streskıran")
+
+# MENÜYE "HAZIRLAYANLAR" SEKMESİ EKLENDİ
 secim = st.sidebar.radio(
     "Menü", 
-    ["Ana Sayfa (Durum Bildir)", "Stres Analizi", "Nefes Egzersizi", "🎧 Rahatlama Alanı", "📝 Şükür Günlüğü"]
+    ["ℹ️ Uygulama Hakkında", "Ana Sayfa (Durum Bildir)", "Stres Analizi", "Nefes Egzersizi", "🎧 Rahatlama Alanı", "📝 Şükür Günlüğü", "👥 Hazırlayanlar"]
 )
 
+# --- SAYFA 0: UYGULAMA HAKKINDA ---
+if secim == "ℹ️ Uygulama Hakkında":
+    st.title("ℹ️ Streskıran Hakkında")
+    
+    st.markdown("""
+    **Streskıran**, modern hayatın getirdiği karmaşa ve zorluklarla başa çıkmanıza yardımcı olmak için tasarlanmış bütüncül bir iyi yaşam rehberidir. 
+    
+    Amacımız, sizi yargılamadan dinlemek, anlık duygu durumunuza göre nokta atışı çözümler sunmak ve zihinsel dayanıklılığınızı artırmaktır.
+    
+    Bu uygulama, aşağıdaki **14 temel alanda** size özel destek ve öneriler sunar:
+    """)
+    
+    with st.expander("📌 Desteklenen Konular ve Özellikler", expanded=True):
+        st.write("""
+        1.  **🚨 Acil Durum Yönetimi:** Yüksek stres anlarında kriz müdahalesi.
+        2.  **💔 İlişkiler ve Duygusal Sorunlar:** Kavga, ayrılık ve iletişim sorunları.
+        3.  **😴 Uyku ve Yorgunluk:** Bitkinlik ve uykusuzlukla baş etme.
+        4.  **🌸 Beden Algısı ve Özgüven:** Güzellik kaygısı ve kendini sevme.
+        5.  **🔮 Gelecek Kaygısı:** Belirsizlik korkusu ve kariyer endişeleri.
+        6.  **💸 Maddi Stres Yönetimi:** Ekonomik kaygılarla başa çıkma.
+        7.  **🫂 Yalnızlık Hissi:** Sosyal izolasyon ve bağ kurma.
+        8.  **🍎 Sağlık ve Beslenme:** Bedenle barışma ve sağlıklı alışkanlıklar.
+        9.  **🌟 Özdeğer ve Mükemmeliyetçilik:** Yetersizlik hissini yenme.
+        10. **📱 Teknoloji ve Sosyal Medya:** Dijital detoks ve ekran bağımlılığı.
+        11. **🚗 Trafik ve Yol Stresi:** Günlük ulaşım gerginlikleri.
+        12. **📚 Akademik ve Sınav Stresi:** Öğrenciler için odaklanma teknikleri.
+        13. **💼 İş ve Kariyer:** Ofis ortamı ve profesyonel yaşam dengesi.
+        14. **🌿 Genel Rahatlama:** Günlük, sebepsiz stres anları.
+        """)
+    
+    st.info("👈 Sol menüden **Ana Sayfa**'ya giderek hemen durumunuzu paylaşmaya başlayabilirsiniz.")
+
 # --- SAYFA 1: ANA SAYFA ---
-if secim == "Ana Sayfa (Durum Bildir)":
-    # Fotoğraf genişliği ayarlandı
+elif secim == "Ana Sayfa (Durum Bildir)":
     st.image("https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", width=400)
     st.title("Bugün Nasıl Hissediyorsun?")
     st.markdown("Seni üzen, yoran veya kaygılandıran şeyi aşağıya yaz.")
     
     stres_seviyesi = st.slider("Stres Seviyen (1 = Çok Sakin, 10 = Patlamak Üzere)", 1, 10, 5)
-    durum_metni = st.text_area("Seni ne strese soktu?", height=100, placeholder="Örn: Çok yorgunum, kendimi çirkin hissediyorum, sınavım var...")
+    durum_metni = st.text_area("Seni ne strese soktu?", height=100, placeholder="Örn: Telefonu elimden bırakamıyorum, kendimi yetersiz hissediyorum...")
 
     if st.button("Çözüm Önerisi Al"):
         if durum_metni:
@@ -163,7 +208,6 @@ elif secim == "📝 Şükür Günlüğü":
     st.title("📝 Pozitif Günlük")
     st.write("Beynimiz olumsuza odaklanmaya meyillidir. Bunu kırmak için bugün iyi giden 3 şeyi yaz.")
 
-    # Session State (Geçici Hafıza)
     if 'gunluk' not in st.session_state:
         st.session_state['gunluk'] = []
 
@@ -185,3 +229,18 @@ elif secim == "📝 Şükür Günlüğü":
             st.info(notum)
     else:
         st.write("Henüz bir şey eklemedin. İlk güzel anını yaz!")
+
+# --- SAYFA 6: HAZIRLAYANLAR (YENİ) ---
+elif secim == "👥 Hazırlayanlar":
+    st.title("👥 Proje Ekibi")
+    st.markdown("### Bu proje, Stress Management dersi grup ödevi olarak tasarlanmıştır.")
+    st.write("")
+    
+    st.success("👤 **Burcu Eren**")
+    st.success("👤 **Nisa Alkır**")
+    st.success("👤 **Sıla Karaman**")
+    st.success("👤 **Semra Koyuncu**")
+    st.success("👤 **Emine Çetin**")
+    
+    st.write("")
+    st.info("🎓 Koç Üniversitesi - 2026")
